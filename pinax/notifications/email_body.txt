@@ -1,10 +1,10 @@
 {% load i18n %}
 <body>
-{% url "notice_settings" as notices_url %}{% blocktrans %}You have received the following notice from{% endblocktrans %} {{ current_site }}:
+{% url "pinax_notifications:notice_settings" as notices_url %}{% blocktrans %}You have received the following notice from{% endblocktrans %} {{ current_site }}:
 <p>
 {{ message }}
 </p>
 <p>
-{% blocktrans %}To change how you receive notifications, please go to {% endblocktrans %} {{ default_http_protocol }}://{{ current_site }}{{ notices_url }}
+{% blocktrans %}To change how you receive notifications, please go to {% endblocktrans %} <a href="{{ default_http_protocol }}://{{ current_site }}{{ notices_url }}">{{ default_http_protocol }}://{{ current_site }}{{ notices_url }}</a>
 </p>
 </body>

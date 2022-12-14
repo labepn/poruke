@@ -1,4 +1,4 @@
 {% load i18n %}
 {% autoescape off %}
-{{ inviter_name }} is inviting you to join WebFIS
+{{ inviter_name }} {% trans "is inviting you to join WebFIS" %}
 {% endautoescape %}
